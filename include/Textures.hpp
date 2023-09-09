@@ -5,7 +5,4 @@
 
 #include "GameManager.hpp"
 
-SDL_Texture* eightBallTex(RenderWindow window)
-{
-	return window.loadTexture("res/gfx/8ball.png");
-}
+SDL_Texture* eightBallTex();

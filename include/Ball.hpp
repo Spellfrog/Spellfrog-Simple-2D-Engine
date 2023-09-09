@@ -2,6 +2,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <vector>
 
 #include "GameManager.hpp"
 #include "Textures.hpp"
@@ -12,7 +13,7 @@ class Ball : public PhysicsObj
 {
 public:
 	explicit Ball(Vector2f p_pos)
-		:PhysicsObj(p_pos, eightBallTex(game.getWindow()), 10) 
+		:PhysicsObj(p_pos, eightBallTex(), 10) 
 	{
 		currentFrame.x = 0;
 		currentFrame.y = 0;
@@ -23,3 +24,5 @@ public:
 private:
 	SDL_Rect currentFrame;
 };
+
+extern std::vector<Ball> balls;
