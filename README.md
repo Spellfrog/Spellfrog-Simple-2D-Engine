@@ -4,7 +4,7 @@ This is a simple 2D engine sandbox project that I'm making to become more comfor
 
 ## TODO:
 * [X] GameManager Init and Update
-* [ ] Input Event class (no more spaghetti code)
+* [X] Input Event class (no more spaghetti code)
 * [ ] Physics function for basic gravity ...
 * [ ] Rendering geometry instead of textures
 * [ ] Drawing squares(?)

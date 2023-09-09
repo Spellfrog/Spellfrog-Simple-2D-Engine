@@ -26,3 +26,5 @@ private:
 };
 
 extern std::vector<Ball> balls;
+
+extern void createBall(Vector2f p_pos);
