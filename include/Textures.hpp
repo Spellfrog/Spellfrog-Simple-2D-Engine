@@ -6,3 +6,5 @@
 #include "GameManager.hpp"
 
 SDL_Texture* eightBallTex();
+
+SDL_Texture* thumbsUpTex();
