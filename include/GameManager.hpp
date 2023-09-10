@@ -6,7 +6,7 @@ class GameManager
 {
 public:
 	GameManager()
-	:gameRunning(true), window("Basic 2D Physics Engine", 1280, 720)
+	:gameRunning(true), window("Basic 2D Physics Engine", 1400, 700)
 	{}
 	void init();
 	void update();
