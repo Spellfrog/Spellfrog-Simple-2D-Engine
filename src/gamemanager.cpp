@@ -20,7 +20,7 @@ void GameManager::init()
 	else
 		std::cout << "Yayyyy vido succeed :3" << std::endl;
 
-	physicsManager.setGlobalGravForce(.05);
+	physicsManager.setGlobalGravForce(.175);
 }
 
 void GameManager::update()
@@ -29,9 +29,9 @@ void GameManager::update()
 
 	physicsManager.updateAll();
 
-	for(Ball* ball : balls)
+	for(Entity* e : Entity::getAllObjects())
 	{
-		game.getWindow().render(*ball);
+		game.getWindow().render(*e);
 	}
 
 	game.getWindow().display();

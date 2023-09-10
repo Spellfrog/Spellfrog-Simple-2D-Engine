@@ -26,7 +26,14 @@ void EventManager::readEvent()
             game.gameRunning = false;
             break;
         case SDL_MOUSEBUTTONDOWN:
+        	// while(e.type == SDL_MOUSEBUTTONDOWN)
+        	// 	mouseHolding();
         	createBall(Vector2f(e.button.x, e.button.y));
         	break;
     }
 }
+
+// void EventManager::mouseHolding()
+// {
+// 	std::cout << "holding" << std::endl;
+// }
