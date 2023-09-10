@@ -25,6 +25,6 @@ private:
 	SDL_Rect currentFrame;
 };
 
-extern std::vector<Ball> balls;
+extern std::vector<Ball*> balls;
 
 extern void createBall(Vector2f p_pos);

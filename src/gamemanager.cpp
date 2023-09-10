@@ -5,6 +5,10 @@
 
 #include "Ball.hpp"
 #include "EventManager.hpp"
+#include "PhysicsManager.hpp"
+#include "PhysicsObj.hpp"
+
+extern PhysicsManager physicsManager;
 
 GameManager game;
 EventManager eventManager;
@@ -15,19 +19,24 @@ void GameManager::init()
 		std::cout << "Womp womp video init failed: " << SDL_GetError() << std::endl;
 	else
 		std::cout << "Yayyyy vido succeed :3" << std::endl;
+
+	physicsManager.setGlobalGravForce(.05);
 }
 
 void GameManager::update()
 {
 	eventManager.watchEvent();
 
-	for(Ball& ball : balls)
+	physicsManager.updateAll();
+
+	for(Ball* ball : balls)
 	{
-		std::cout << "rendering balls" << std::endl;
-		game.getWindow().render(ball);
+		game.getWindow().render(*ball);
 	}
 
 	game.getWindow().display();
 
 	game.getWindow().clear();
+
+	SDL_Delay(10);
 }

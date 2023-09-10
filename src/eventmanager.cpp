@@ -26,7 +26,7 @@ void EventManager::readEvent()
             game.gameRunning = false;
             break;
         case SDL_MOUSEBUTTONDOWN:
-        	createBall(Vector2f(e.button.x / 4 - (48 / 2), e.button.y / 4 - (48 / 2)));
+        	createBall(Vector2f(e.button.x, e.button.y));
         	break;
     }
 }
